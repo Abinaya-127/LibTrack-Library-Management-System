@@ -6,8 +6,10 @@ LibTrack is a Java-based Library Management System used to manage books, members
 ## Technologies Used
 - Java 21
 - Java Swing
+- Spring Boot
 - MySQL 8.0
 - JDBC
+- HTML, CSS, JavaScript
 - Visual Studio Code
 
 ## Features
@@ -19,6 +21,8 @@ LibTrack is a Java-based Library Management System used to manage books, members
 6. Automatic Book Quantity Update
 7. Overdue Book Tracking
 8. Fine Calculation (₹5 per overdue day)
+9. Web-based frontend
+10. REST API backend
 
 ## Database Tables
 - Books
@@ -26,15 +30,11 @@ LibTrack is a Java-based Library Management System used to manage books, members
 - IssueRecords
 - Returns
 
-## How to Run
-1. Install Java and MySQL.
-2. Create the LibTrack database and required tables.
-3. Add MySQL Connector/J to the project `lib` folder.
-4. Open the project in VS Code.
-5. Run `Dashboard.java`.
-
-## Project Status
-Completed and tested successfully.
+## Project Structure
+- `src/` – Java Swing desktop application
+- `backend/` – Spring Boot backend and web application
+- `web/` – Frontend source files
+- `lib/` – MySQL Connector/J
 
 ## Developed By
 Abinaya A
