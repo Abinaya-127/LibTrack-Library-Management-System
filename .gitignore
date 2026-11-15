@@ -1,0 +1,5 @@
+db.properties
+bin/
+*.class
+backend/target/
+backend/target_old/

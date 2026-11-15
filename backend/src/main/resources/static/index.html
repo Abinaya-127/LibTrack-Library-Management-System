@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibTrack - Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>📚 LibTrack</h2>
+        <p class="subtitle">Library Management</p>
+
+        <nav>
+            <button class="nav-btn active" onclick="showPage('dashboard', this)">Dashboard</button>
+            <button class="nav-btn" onclick="showPage('books', this)">Book Management</button>
+            <button class="nav-btn" onclick="showPage('members', this)">Member Management</button>
+            <button class="nav-btn" onclick="showPage('issues', this)">Issue Books</button>
+            <button class="nav-btn" onclick="showPage('returns', this)">Return Books</button>
+            <button class="nav-btn" onclick="showPage('overdue', this)">Overdue Books</button>
+        </nav>
+
+        <p class="sidebar-footer">LibTrack © 2026</p>
+    </div>
+
+    <main class="main-content">
+
+        <header>
+            <h1>LIBRARY MANAGEMENT SYSTEM</h1>
+            <p>Manage your library efficiently with LibTrack</p>
+        </header>
+
+        <section id="dashboard" class="page active">
+            <h2>Welcome to LibTrack</h2>
+            <p class="welcome">Your Library Management Dashboard</p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total Books</h3>
+                    <p id="totalBooks">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Members</h3>
+                    <p id="totalMembers">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Issued Books</h3>
+                    <p id="totalIssues">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Overdue Books</h3>
+                    <p id="totalOverdue">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="books" class="page">
+            <h2>Book Management</h2>
+            <form id="bookForm">
+                <input id="bookTitle" placeholder="Book Title" required>
+                <input id="bookAuthor" placeholder="Author">
+                <input id="bookCategory" placeholder="Category">
+                <input id="bookQuantity" type="number" min="0" placeholder="Quantity" required>
+                <button type="submit">Add Book</button>
+            </form>
+            <div id="bookMessage" class="message"></div>
+            <div id="booksTable"></div>
+        </section>
+
+        <section id="members" class="page">
+            <h2>Member Management</h2>
+            <form id="memberForm">
+                <input id="memberName" placeholder="Member Name" required>
+                <input id="memberEmail" type="email" placeholder="Email">
+                <input id="memberPhone" placeholder="Phone Number">
+                <button type="submit">Add Member</button>
+            </form>
+            <div id="memberMessage" class="message"></div>
+            <div id="membersTable"></div>
+        </section>
+
+        <section id="issues" class="page">
+            <h2>Issue Books</h2>
+            <form id="issueForm">
+                <input id="issueBookId" type="number" min="1" placeholder="Book ID" required>
+                <input id="issueMemberId" type="number" min="1" placeholder="Member ID" required>
+                <button type="submit">Issue Book</button>
+            </form>
+            <div id="issueMessage" class="message"></div>
+            <div id="issuesTable"></div>
+        </section>
+
+        <section id="returns" class="page">
+            <h2>Return Books</h2>
+            <form id="returnForm">
+                <input id="returnIssueId" type="number" min="1" placeholder="Issue ID" required>
+                <button type="submit">Return Book</button>
+            </form>
+            <div id="returnMessage" class="message"></div>
+            <div id="returnsTable"></div>
+        </section>
+
+        <section id="overdue" class="page">
+            <h2>Overdue Books</h2>
+            <div id="overdueTable"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
